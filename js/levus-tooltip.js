@@ -6,25 +6,31 @@
     // елементи
     const tultip = document.querySelectorAll('.levus-tultip');
 
-    // швидше працює
-    for(let i = 0; i<tultip.length; i++){
+    if(localStorage.tultip != 1){
 
-        // створили елемент
-        const span = document.createElement('span');
+        // швидше працює
+        for(let i = 0; i<tultip.length; i++){
 
-        // додали клас для вибірки
-        span.setAttribute('class', 'content');
+            // створили елемент
+            const span = document.createElement('span');
 
-        // отримали контент з атрибута
-        const title = tultip[i].title;
+            // додали клас для вибірки
+            span.setAttribute('class', 'content');
 
-        // встановили затримку
-        span.style.animationDelay = `${delay * i}ms`;
+            // отримали контент з атрибута
+            const title = tultip[i].title;
 
-        // поклали дані з атрибута у тултіп
-        span.append(title);
+            // встановили затримку
+            span.style.animationDelay = `${delay * i}ms`;
 
-        // додали в тег
-        tultip[i].append(span);
+            // поклали дані з атрибута у тултіп
+            span.append(title);
+
+            // додали в тег
+            tultip[i].append(span);
+
+            localStorage.tultip = 1;
+        }        
+
     }
 }
