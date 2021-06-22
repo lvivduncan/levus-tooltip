@@ -29,8 +29,9 @@
             // додали в тег
             tultip[i].append(span);
 
-            localStorage.tultip = 1;
-        }        
+        }
+
+        localStorage.tultip = 1;
 
     }
 }
