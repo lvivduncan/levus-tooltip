@@ -1,0 +1,57 @@
+/* for test */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 100px;
+}
+
+#example{
+    width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    text-align: center;
+}
+
+svg{
+    width: 64px;
+    height: 64px;
+    fill: rgb(60, 77, 230);
+}
+/* for test */
+
+.levus-tultip{
+    position: relative;
+}
+
+.levus-tultip .content{
+    display: block;
+    position: absolute;
+    left: calc(50% - 100px);
+    width: 200px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgb(236, 236, 236);
+
+    opacity: 0;
+    transition: 1s;
+    animation: show 4s 1;
+    transform-origin: 0 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+        transform: rotateX(0);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateX(90deg) translateY(50px);
+    }
+}
