@@ -18,7 +18,7 @@
             span.setAttribute('class', 'content');
 
             // отримали контент з атрибута
-            const title = tultip[i].title;
+            const title = tultip[i].ariaLabel;
 
             // встановили затримку
             span.style.animationDelay = `${delay * i}ms`;
