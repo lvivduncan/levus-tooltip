@@ -1,15 +1,15 @@
-// 22-06-2021
+// 23-06-2021
 {
     // затримка
     const delay = 1000;
 
     // елементи
-    const tultip = document.querySelectorAll('.levus-tultip');
+    const tooltip = document.querySelectorAll('.levus-tooltip');
 
-    if(localStorage.tultip != 1){
+    if(localStorage.tooltip != 1){
 
         // швидше працює
-        for(let i = 0; i<tultip.length; i++){
+        for(let i = 0; i<tooltip.length; i++){
 
             // створили елемент
             const span = document.createElement('span');
@@ -18,7 +18,7 @@
             span.setAttribute('class', 'content');
 
             // отримали контент з атрибута
-            const title = tultip[i].ariaLabel;
+            const title = tooltip[i].ariaLabel;
 
             // встановили затримку
             span.style.animationDelay = `${delay * i}ms`;
@@ -27,11 +27,14 @@
             span.append(title);
 
             // додали в тег
-            tultip[i].append(span);
+            tooltip[i].append(span);
 
         }
 
-        localStorage.tultip = 1;
+        // анімація 1 раз
+        // localStorage.tooltip = 1;
 
     }
 }
+
+// примітка: відступ тултіпа залеже від розміру елемента, в якого є тултіп!

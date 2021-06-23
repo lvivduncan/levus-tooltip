@@ -17,19 +17,15 @@ body{
     grid-gap: 20px;
     text-align: center;
 }
-
-svg{
-    width: 64px;
-    height: 64px;
-    fill: rgb(60, 77, 230);
-}
 /* for test */
 
-.levus-tultip{
+.levus-tooltip{
     position: relative;
+    color: #5564eb;
+    font-size: 60px;
 }
 
-.levus-tultip .content{
+.levus-tooltip .content{
     display: block;
     position: absolute;
     left: calc(50% - 100px);
@@ -37,21 +33,21 @@ svg{
     padding: 10px;
     background: #fff;
     box-shadow: 0 0 10px rgb(236, 236, 236);
+    font-size: 14px;
 
     opacity: 0;
     transition: 1s;
-    animation: show 4s 1;
+    animation: show 4s;
     transform-origin: 0 0;
-    animation-fill-mode: forwards;
 }
 
 @keyframes show {
     0%{
         opacity: 0;
-        transform: rotateX(0);
-    }
+        transform: rotateX(90deg);
+    }    
     100%{
+        transform: rotateX(0);
         opacity: 1;
-        transform: rotateX(90deg) translateY(50px);
     }
 }
